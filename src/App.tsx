@@ -2,14 +2,18 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import { ErrorPage } from './pages/Error'
-import { Root } from './routes/root'
+
+import { ErrorPage } from '@/pages/error'
+import { Root } from '@/routes/root'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: 'auth/login'
   }
 ])
 
