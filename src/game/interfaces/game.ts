@@ -2,7 +2,7 @@ import { ITeam } from '@/team/interfaces'
 
 export interface IGame {
     
-    _id      : string
+    id       : string
     startDate: string
     endDate  : string
     status   : boolean

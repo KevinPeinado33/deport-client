@@ -51,23 +51,7 @@ export const GameSidebar = () => {
         >
             <Box sx={{ width: 250, paddingTop: 5 }}>
                 <List>
-                    <ListItem>
-                        <Input
-                            autoFocus
-                            type='text'
-                            placeholder='Buscar...'
-                            endAdornment={
-                                <InputAdornment position='end'>
-                                    <IconButton
-                                        aria-label='toggle password visibility'
-                                    >
-                                        <SearchOutlined />
-                                    </IconButton>
-                                </InputAdornment>
-                            }
-                        />
-                    </ListItem>
-
+                   
                     <ListItem button>
                         <ListItemIcon>
                             <AccountCircleOutlined />

@@ -20,20 +20,19 @@ export default function SearchModal() {
 
     return (
         <div>
-            <Button variant="outlined" onClick={handleClickOpen}>
+            <Button variant='outlined' onClick={handleClickOpen}>
                 Open form dialog
             </Button>
             <Dialog open={open} onClose={handleClose} fullWidth >
                 <DialogTitle>Buscar</DialogTitle>
                 <DialogContent>
                     <TextField
-                        autoFocus
-                        margin="dense"
-                        id="name"
-                        label="Ingrese termino de busqueda ..."
-                        type="email"
+                        margin='dense'
+                        id='name'
+                        label='Ingrese termino de busqueda ...'
+                        type='email'
                         fullWidth
-                        variant="standard"
+                        variant='standard'
                     />
                 </DialogContent>
                 <DialogActions>
