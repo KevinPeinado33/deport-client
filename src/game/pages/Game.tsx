@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 
-import { gameController } from '../controller'
+import { gameController } from '../controllers'
 
 export const GamePage = () => {
 
