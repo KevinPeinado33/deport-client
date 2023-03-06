@@ -6,7 +6,7 @@ export interface IGame {
     startDate: string
     endDate  : string
     status   : boolean
-    winner   : ITeam
+    winner?  : ITeam
     teams    : ITeam[ ]
 
 }

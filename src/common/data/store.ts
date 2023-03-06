@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 import uiReducer from './slices/ui.slice'
+import { gameReducer } from '@/game/data'
 
 export const store = configureStore({
     reducer: {
-        ui: uiReducer
+        ui: uiReducer,
+        game: gameReducer
     }
 })
 
