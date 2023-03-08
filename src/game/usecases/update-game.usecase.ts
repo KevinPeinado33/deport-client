@@ -2,7 +2,12 @@ import { AppDispatch } from '@/common/data/store'
 import { addGame } from '../data/game-slice.data'
 import { IGame } from '../interfaces'
 
-export const addGameUseCase = ( game: IGame ) => ( dispatch: AppDispatch ) => {
+interface Props {
+    game: IGame
+    id  : string
+}
+
+export const updateGameUseCase = ({ game, id }: Props) => ( dispatch: AppDispatch ) => {
     
     try {
 
@@ -13,4 +18,5 @@ export const addGameUseCase = ( game: IGame ) => ( dispatch: AppDispatch ) => {
     }
 
 }
+
 

@@ -5,7 +5,8 @@ import { store } from '@/common/data/store'
 import { IGame } from '../interfaces'
 import { 
     getGamesUseCase, 
-    addGamgeUseCase 
+    addGameUseCase,
+    updateGameUseCase
 } from '../usecases'
 
 export const gameController = () => {
@@ -14,13 +15,23 @@ export const gameController = () => {
         store.dispatch( getGamesUseCase () )
     }, [])
     
-    const addGame = useCallback( (game: IGame ) => {
-        store.dispatch( addGamgeUseCase( game ) )
+    const addGame = useCallback( (game: IGame) => {
+        store.dispatch( addGameUseCase( game ) )
     },[])
+
+    const updateGame = useCallback( (game: IGame) => {
+        store.dispatch( 
+            updateGameUseCase({ 
+                game, 
+                id: game.id 
+            })
+        )
+    }, [])
 
     return {
         getGames,
-        addGame
+        addGame,
+        updateGame,
     }
     
 }
