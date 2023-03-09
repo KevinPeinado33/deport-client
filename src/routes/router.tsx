@@ -21,6 +21,7 @@ import {
   EditTeamPage,
   MyTeamsPage
 } from '@/team/pages'
+import { ProductsPage } from '@/product/pages'
 
 export const router = createBrowserRouter([
     {
@@ -86,5 +87,9 @@ export const router = createBrowserRouter([
           element: <EditTeamPage />
         }
       ]
+    },
+    {
+      path: '/products',
+      element: <ProductsPage />
     }
 ])

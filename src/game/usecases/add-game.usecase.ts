@@ -1,9 +1,9 @@
 import { sportApi } from '@/common/api'
+import { showToast } from '@/common/utils'
 import { AppDispatch } from '@/common/data/store'
 
 import { addGame } from '../data/game-slice.data'
 import { IGame } from '../interfaces'
-import { showToast } from '@/common/utils'
 
 export const addGameUseCase = ( game: IGame ) => async ( dispatch: AppDispatch ) => {
     
@@ -12,6 +12,11 @@ export const addGameUseCase = ( game: IGame ) => async ( dispatch: AppDispatch )
         const { data } = await sportApi.post< IGame >('/', game)
 
         dispatch( addGame( data ) )
+
+        showToast({ 
+            message: 'Juego registrado correctamente.', 
+            type: 'success' 
+        })
 
     } catch ( error: any ) {
         showToast({ 

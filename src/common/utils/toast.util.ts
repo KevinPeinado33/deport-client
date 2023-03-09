@@ -4,8 +4,15 @@ const TIME_DURATION = 5000
 
 interface Props {
     message: string
-    type   : string
+    type   : TypeToast
 }
+
+type TypeToast = 
+    | 'info'
+    | 'success' 
+    | 'error' 
+    | 'warning' 
+    | 'default'
 
 export const showToast = ({ message, type }: Props) => {
     return toast(message, {
