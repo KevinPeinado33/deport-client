@@ -10,6 +10,7 @@ export const GamePage = () => {
     <>
       <h1>game</h1>
       <Button
+        color='secondary'
         onClick={ () => addGame({
           id: 'qw',
           startDate: 'hoy',
@@ -18,7 +19,7 @@ export const GamePage = () => {
           teams: []
         }) }
       >
-        Click pa agregar!
+        Click pa agregar
       </Button>
     </>
   )
