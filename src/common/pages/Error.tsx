@@ -1,5 +1,10 @@
+import { useRouteError } from 'react-router-dom'
+
 export const ErrorPage = () => {
+
+  const { message = '' } = useRouteError() as { message: string }
+
   return (
-    <div>Opps!, error al encontrar la pagina!</div>
+    <div>{ message }</div>
   )
 }

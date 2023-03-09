@@ -1,10 +1,17 @@
 import { AppDispatch } from '@/common/data/store'
-import { getGames } from '../data/game-slice.data'
+import { sportApi } from '@/common/api'
 
-export const getGamesUseCase = () => ( dispatch: AppDispatch ) => {
+import { getGames } from '../data/game-slice.data'
+import { IGame } from '../interfaces'
+
+export const getGamesUseCase = () => async ( dispatch: AppDispatch ) => {
     
     try {
-        getGames([])
+
+        const { data } = await sportApi.get< IGame[] >('/')
+
+        getGames( data )
+        
     } catch ( error ) {
         console.log({ error })
     }

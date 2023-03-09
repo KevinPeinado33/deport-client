@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
             element: <GamePage />
           },
           {
-            path: ':gameId',
+            path: 'game/:gameId',
             element: <GameInfoPage />
           },
           {
